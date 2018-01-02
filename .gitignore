@@ -1,0 +1,21 @@
+.DS_Store
+*.xcuserstate
+xcuserdata
+*.xccheckout
+*.xcscmblueprint
+*.pyc
+out/
+
+# Ignore idea stuff
+/.idea
+
+Tools/LifeSleepAnalyzer/movement.png
+Tools/LifeSleepAnalyzer/sleep data
+Tools/LifeSleepAnalyzer/out
+
+Tools/LifeTelemetry/.idea/workspace.xml
+
+# Fastlane
+/fastlane/report.xml
+/fastlane/Error*.png
+/fastlane/Preview.html
