@@ -8,22 +8,51 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
+#import <PureLayout.h>
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Overview";
+    
+    // create collectionview
+    [self createCollectionView];
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)createCollectionView {
+    UICollectionViewFlowLayout *l = [[UICollectionViewFlowLayout alloc] init];
+    
+    UICollectionView *cv = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:l];
+    cv.translatesAutoresizingMaskIntoConstraints = NO;
+    cv.backgroundColor = [UIColor grayColor];
+    cv.dataSource = self;
+    cv.delegate = self;
+    
+    [cv registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
+    
+    [self.view addSubview:cv];
+    [cv autoPinEdgesToSuperviewEdges];
 }
 
+#pragma mark UICollectionViewDelegate and UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 15;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor greenColor];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(50.0, 50.0);
+}
 
 @end
