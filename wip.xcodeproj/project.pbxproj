@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6420B852D02FA9FE134256DD /* libPods-wip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4BC242EE1CDCA9A1208C97 /* libPods-wip.a */; };
+		7CB4281D1FFBCD1F0023938F /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB4281C1FFBCD1F0023938F /* HeaderCollectionReusableView.m */; };
 		7CC2E2461FFBC28A0090C4BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2E2451FFBC28A0090C4BA /* AppDelegate.m */; };
 		7CC2E2491FFBC28A0090C4BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2E2481FFBC28A0090C4BA /* ViewController.m */; };
 		7CC2E24C1FFBC28A0090C4BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2E24A1FFBC28A0090C4BA /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CB4281B1FFBCD1F0023938F /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		7CB4281C1FFBCD1F0023938F /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		7CC2E2411FFBC28A0090C4BA /* wip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC2E2441FFBC28A0090C4BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7CC2E2451FFBC28A0090C4BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				7CC2E24F1FFBC28A0090C4BA /* LaunchScreen.storyboard */,
 				7CC2E2521FFBC28A0090C4BA /* Info.plist */,
 				7CC2E2531FFBC28A0090C4BA /* main.m */,
+				7CB4281B1FFBCD1F0023938F /* HeaderCollectionReusableView.h */,
+				7CB4281C1FFBCD1F0023938F /* HeaderCollectionReusableView.m */,
 			);
 			path = wip;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB4281D1FFBCD1F0023938F /* HeaderCollectionReusableView.m in Sources */,
 				7CC2E2491FFBC28A0090C4BA /* ViewController.m in Sources */,
 				7CC2E2541FFBC28A0090C4BA /* main.m in Sources */,
 				7CC2E2461FFBC28A0090C4BA /* AppDelegate.m in Sources */,
