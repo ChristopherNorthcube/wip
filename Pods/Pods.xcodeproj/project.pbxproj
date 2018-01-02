@@ -7,35 +7,178 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EACA7CF1E2C5A26849311915E64F58F /* Pods-wip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E65FD3A04A2A62B70C7515717E033893 /* Pods-wip-dummy.m */; };
-		56EEDCEC503EAD6204A9EC2D24076C15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		24173055ED584F051AF15DD1ECDD8223 /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EC4628D368B17ADC7EB686E20E2AB0 /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E91DDD13969018637AFA8044EF0B25C /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DA73CABB3A3FA8C02451B10348538E76 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39FD61DFEA991D728FEF3B7D37836E7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3C62C8AA963FAF55024D8AB64B29C10C /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B994FDFD17C4B36B6B3B952462A2BFB /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53D23A00E95CD9010CC582CD4C039575 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D18DBA6FDFF8C3103D4FB3CD95298759 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58EE6CED6F336754B0E50132F23BFFD8 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A847650649E29CC89A4B8B009CBF2DB /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59944E7D4320B33209B4659403F310DE /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDB325AFEC77DD686DB8D0CAF52008 /* NSLayoutConstraint+PureLayout.m */; };
+		65FF98F97E624A9F65F316163B40E6B1 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C512059939B1C70897705E5AF0F0035 /* DTError.m */; };
+		6D035B21F99373FFC94C2184EEE5D3EA /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 870A4647B1264F1239681696FD5A5FBE /* DTTimePeriodGroup.m */; };
+		6E3821BF693336BB2811CD7624622DDF /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D95D60253EBF9BFA3BA63AD3D31A41 /* DTTimePeriodChain.m */; };
+		70366D8894E5A2C31836F947A15C6EE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7273AF085D94E9CC0C80A35ECA88DB25 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 83600F60A8460A84088D851B20EB85EE /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78BC27630E665376DFA35902877C5E9C /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 226A2702F928CEBF282091F3303684CC /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		792D5F4C3D387EF341CAC369A9352410 /* DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AA8260D8E74539EADAA98E98616C0 /* DateTools-dummy.m */; };
+		867E610E5D6C1C69E1BA81654C1CA02D /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = E4DF09C925DEBD352DA30C2FF349FE05 /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90A6AF3932937E0725C26421874FDCFA /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E6F7E21044F4EA162366BDF38ED798 /* ALView+PureLayout.m */; };
+		917708EF9C1E0FF3F52950702E64CFCF /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = BC31B4FDA172B8FE52F03E45511B1109 /* DTTimePeriod.m */; };
+		A2CC7B671A0763FABCB08162D30E4C89 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C861CCAE5B481B36C68864410146B6 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABA0FB9FB97C16DD62962473225BF789 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FB75151306EA6AD447942A24DD6C00 /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF8F70251749BDAB5598325EB5ED5884 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B906568B19F4FE38BC6F9B01C64368 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAF7566596B85AAD71ACEE72B0926AAD /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 16FC42BEDB85D429C0579442CAA36A94 /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C01E919EC8DB801B50C2794FBF03357B /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEACB42388E264536B6851ECEB7181B /* PureLayout-dummy.m */; };
+		C6A07F406108F8A272C61D3E0003AC4D /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C55D9F20416C0726F76C716BC04D24A5 /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9F64C23625AFDED348387E17700D00A /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E73965CF69D93103D1F89987F2BCE038 /* NSArray+PureLayout.m */; };
+		CD33972EA26CBEC47AD852EC2C94D9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E13E2DA59EC28F552BA38FD659793348 /* Pods-wip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E65FD3A04A2A62B70C7515717E033893 /* Pods-wip-dummy.m */; };
+		E7C2D39B0444E09CE41BA92C1933E5FB /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DAEBB5E814265EF914D2F2F170437E /* NSDate+DateTools.m */; };
+		E9A2DED9E1C31D8D08ADBB352D6C13C8 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 751A51F5790DEDED8EDC57FA21B7C9C3 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7207BD83807D2D87377FB80266EA4E4 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56E88481ABB99F9C48B1BE098F7297 /* DTTimePeriodCollection.m */; };
+		F7D72F58455BFCBFD8CCF6E8101282E0 /* DTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D10644544875704734E35782595C4A69 /* DTConstants.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		00F85F861E77143090C23FC92EBD8B0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7BDB909814DEB7782F79D85E0E25A82;
+			remoteInfo = PureLayout;
+		};
+		8BA8D24C3480A1B003C68B172C9452E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36F6D48026E14827529F787D63D61B8;
+			remoteInfo = DateTools;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A8D492DAC5E890297AE6D4A44F4A8A1 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		16C861CCAE5B481B36C68864410146B6 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
+		16FC42BEDB85D429C0579442CAA36A94 /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
 		1B84272EA9535660923E2DE56695359D /* Pods-wip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wip.release.xcconfig"; sourceTree = "<group>"; };
+		226A2702F928CEBF282091F3303684CC /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		298A64F1AD0138A5D5A3BEC5E5016E09 /* Pods-wip-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-wip-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B994FDFD17C4B36B6B3B952462A2BFB /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		2C27E77C878B79C71FEBB958F74241AA /* libDateTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDateTools.a; path = libDateTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3306E60A105894410C235C1DDC0B3CAB /* Pods-wip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wip.debug.xcconfig"; sourceTree = "<group>"; };
+		356AA8260D8E74539EADAA98E98616C0 /* DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateTools-dummy.m"; sourceTree = "<group>"; };
 		36D0000F97CB95DCBFDE230966C025E4 /* Pods-wip-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wip-frameworks.sh"; sourceTree = "<group>"; };
-		4F4C5DBE5C8C0766085444250A956005 /* libPods-wip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-wip.a"; path = "libPods-wip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A847650649E29CC89A4B8B009CBF2DB /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		53EDB325AFEC77DD686DB8D0CAF52008 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		62D95D60253EBF9BFA3BA63AD3D31A41 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C512059939B1C70897705E5AF0F0035 /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DateTools/DTError.m; sourceTree = "<group>"; };
 		7123EE3E67848124D0076EC52C717633 /* Pods-wip-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wip-resources.sh"; sourceTree = "<group>"; };
+		751A51F5790DEDED8EDC57FA21B7C9C3 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		83600F60A8460A84088D851B20EB85EE /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		84FD8CEC6C45A7B730F50871DD09C39A /* DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTools.xcconfig; sourceTree = "<group>"; };
+		870A4647B1264F1239681696FD5A5FBE /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
+		89B906568B19F4FE38BC6F9B01C64368 /* NSDate+DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateTools.h"; path = "DateTools/DateTools/NSDate+DateTools.h"; sourceTree = "<group>"; };
+		89BFD85558CE5D4C56DD162308A191CA /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96EC4628D368B17ADC7EB686E20E2AB0 /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DateTools/DTError.h; sourceTree = "<group>"; };
+		9B8843185D0E13ACC25007D355674282 /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPureLayout.a; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DAEBB5E814265EF914D2F2F170437E /* NSDate+DateTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateTools.m"; path = "DateTools/DateTools/NSDate+DateTools.m"; sourceTree = "<group>"; };
+		B2FB75151306EA6AD447942A24DD6C00 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
+		BC31B4FDA172B8FE52F03E45511B1109 /* DTTimePeriod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriod.m; path = DateTools/DateTools/DTTimePeriod.m; sourceTree = "<group>"; };
+		C55D9F20416C0726F76C716BC04D24A5 /* DTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTConstants.h; path = DateTools/DateTools/DTConstants.h; sourceTree = "<group>"; };
 		C5A365597F248F716AD01AD70950ED02 /* Pods-wip-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-wip-acknowledgements.plist"; sourceTree = "<group>"; };
+		C938F9504EA92B81D51327A0283D86FF /* libPods-wip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-wip.a"; path = "libPods-wip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA56E88481ABB99F9C48B1BE098F7297 /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
+		CCBFB9FDE0FEEE15014FEB63B233D4E5 /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
+		D10644544875704734E35782595C4A69 /* DTConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTConstants.m; path = DateTools/DateTools/DTConstants.m; sourceTree = "<group>"; };
+		D18DBA6FDFF8C3103D4FB3CD95298759 /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools/DateTools.h; sourceTree = "<group>"; };
+		D5E6F7E21044F4EA162366BDF38ED798 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		DA73CABB3A3FA8C02451B10348538E76 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		E4DF09C925DEBD352DA30C2FF349FE05 /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
 		E65FD3A04A2A62B70C7515717E033893 /* Pods-wip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-wip-dummy.m"; sourceTree = "<group>"; };
+		E73965CF69D93103D1F89987F2BCE038 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		EC48F9540065C5166E57A19B0510538C /* DateTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTools-prefix.pch"; sourceTree = "<group>"; };
+		FEEACB42388E264536B6851ECEB7181B /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		922AC3924CB59F6CBD110B159F5F24E6 /* Frameworks */ = {
+		1CAB850C037CB1330542A57840D22690 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EEDCEC503EAD6204A9EC2D24076C15 /* Foundation.framework in Frameworks */,
+				39FD61DFEA991D728FEF3B7D37836E7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD28198B79F56A682537EE6D22110EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD33972EA26CBEC47AD852EC2C94D9D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64818EEEF5EA524C1DD69933592634F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70366D8894E5A2C31836F947A15C6EE0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C24EC8CB68018225F8D36C16E6AC8AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84FD8CEC6C45A7B730F50871DD09C39A /* DateTools.xcconfig */,
+				356AA8260D8E74539EADAA98E98616C0 /* DateTools-dummy.m */,
+				EC48F9540065C5166E57A19B0510538C /* DateTools-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DateTools";
+			sourceTree = "<group>";
+		};
+		330586182AA0A8FA409FE77F9E65EF16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C27E77C878B79C71FEBB958F74241AA /* libDateTools.a */,
+				C938F9504EA92B81D51327A0283D86FF /* libPods-wip.a */,
+				9B8843185D0E13ACC25007D355674282 /* libPureLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A6D9A27119F1DCEFDFF4B515EC8247E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A8D492DAC5E890297AE6D4A44F4A8A1 /* PureLayout.xcconfig */,
+				FEEACB42388E264536B6851ECEB7181B /* PureLayout-dummy.m */,
+				89BFD85558CE5D4C56DD162308A191CA /* PureLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
+			sourceTree = "<group>";
+		};
+		3B375BC3D3B1B8E48DEDC6CF0CEEA9FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84C4EC9FDC4A7B710C2D6EDB86126556 /* DateTools */,
+				83116E0620AFF1D1ED8C2CCD710D70B5 /* PureLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B46EB0D307DB07740B61F8B34FA09CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCBFB9FDE0FEEE15014FEB63B233D4E5 /* DateTools.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7063DAC61D7BC149A8D7934C7BCA6014 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,17 +192,53 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				AA48D0F3E7A0D382DEB15CED70011970 /* Products */,
+				3B375BC3D3B1B8E48DEDC6CF0CEEA9FB /* Pods */,
+				330586182AA0A8FA409FE77F9E65EF16 /* Products */,
 				7063DAC61D7BC149A8D7934C7BCA6014 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		AA48D0F3E7A0D382DEB15CED70011970 /* Products */ = {
+		83116E0620AFF1D1ED8C2CCD710D70B5 /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
-				4F4C5DBE5C8C0766085444250A956005 /* libPods-wip.a */,
+				226A2702F928CEBF282091F3303684CC /* ALView+PureLayout.h */,
+				D5E6F7E21044F4EA162366BDF38ED798 /* ALView+PureLayout.m */,
+				83600F60A8460A84088D851B20EB85EE /* NSArray+PureLayout.h */,
+				E73965CF69D93103D1F89987F2BCE038 /* NSArray+PureLayout.m */,
+				2B994FDFD17C4B36B6B3B952462A2BFB /* NSLayoutConstraint+PureLayout.h */,
+				53EDB325AFEC77DD686DB8D0CAF52008 /* NSLayoutConstraint+PureLayout.m */,
+				DA73CABB3A3FA8C02451B10348538E76 /* PureLayout.h */,
+				4A847650649E29CC89A4B8B009CBF2DB /* PureLayout+Internal.h */,
+				751A51F5790DEDED8EDC57FA21B7C9C3 /* PureLayoutDefines.h */,
+				3A6D9A27119F1DCEFDFF4B515EC8247E /* Support Files */,
 			);
-			name = Products;
+			name = PureLayout;
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		84C4EC9FDC4A7B710C2D6EDB86126556 /* DateTools */ = {
+			isa = PBXGroup;
+			children = (
+				D18DBA6FDFF8C3103D4FB3CD95298759 /* DateTools.h */,
+				C55D9F20416C0726F76C716BC04D24A5 /* DTConstants.h */,
+				D10644544875704734E35782595C4A69 /* DTConstants.m */,
+				96EC4628D368B17ADC7EB686E20E2AB0 /* DTError.h */,
+				6C512059939B1C70897705E5AF0F0035 /* DTError.m */,
+				16FC42BEDB85D429C0579442CAA36A94 /* DTTimePeriod.h */,
+				BC31B4FDA172B8FE52F03E45511B1109 /* DTTimePeriod.m */,
+				16C861CCAE5B481B36C68864410146B6 /* DTTimePeriodChain.h */,
+				62D95D60253EBF9BFA3BA63AD3D31A41 /* DTTimePeriodChain.m */,
+				E4DF09C925DEBD352DA30C2FF349FE05 /* DTTimePeriodCollection.h */,
+				CA56E88481ABB99F9C48B1BE098F7297 /* DTTimePeriodCollection.m */,
+				B2FB75151306EA6AD447942A24DD6C00 /* DTTimePeriodGroup.h */,
+				870A4647B1264F1239681696FD5A5FBE /* DTTimePeriodGroup.m */,
+				89B906568B19F4FE38BC6F9B01C64368 /* NSDate+DateTools.h */,
+				B2DAEBB5E814265EF914D2F2F170437E /* NSDate+DateTools.m */,
+				3B46EB0D307DB07740B61F8B34FA09CC /* Resources */,
+				2C24EC8CB68018225F8D36C16E6AC8AE /* Support Files */,
+			);
+			name = DateTools;
+			path = DateTools;
 			sourceTree = "<group>";
 		};
 		BC2BF4C0A606D2D74963B0E9FD13598C /* Pods-wip */ = {
@@ -95,21 +274,88 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1DC5926BF41F775023DFA4FCB41BA95A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D23A00E95CD9010CC582CD4C039575 /* DateTools.h in Headers */,
+				C6A07F406108F8A272C61D3E0003AC4D /* DTConstants.h in Headers */,
+				24173055ED584F051AF15DD1ECDD8223 /* DTError.h in Headers */,
+				BAF7566596B85AAD71ACEE72B0926AAD /* DTTimePeriod.h in Headers */,
+				A2CC7B671A0763FABCB08162D30E4C89 /* DTTimePeriodChain.h in Headers */,
+				867E610E5D6C1C69E1BA81654C1CA02D /* DTTimePeriodCollection.h in Headers */,
+				ABA0FB9FB97C16DD62962473225BF789 /* DTTimePeriodGroup.h in Headers */,
+				AF8F70251749BDAB5598325EB5ED5884 /* NSDate+DateTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6729CB8A91CAF1942CC00F6906285FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BC27630E665376DFA35902877C5E9C /* ALView+PureLayout.h in Headers */,
+				7273AF085D94E9CC0C80A35ECA88DB25 /* NSArray+PureLayout.h in Headers */,
+				3C62C8AA963FAF55024D8AB64B29C10C /* NSLayoutConstraint+PureLayout.h in Headers */,
+				58EE6CED6F336754B0E50132F23BFFD8 /* PureLayout+Internal.h in Headers */,
+				2E91DDD13969018637AFA8044EF0B25C /* PureLayout.h in Headers */,
+				E9A2DED9E1C31D8D08ADBB352D6C13C8 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		53279005AA353FCC0A92ACCC9232D6AE /* Pods-wip */ = {
+		4906175AE7B32D06F08B2B2A3DBB548D /* Pods-wip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 980C9E6FA7C093D5B8A2F024DE7472A1 /* Build configuration list for PBXNativeTarget "Pods-wip" */;
+			buildConfigurationList = 25B5C92D0D3A2C52FFC84FA628DF1175 /* Build configuration list for PBXNativeTarget "Pods-wip" */;
 			buildPhases = (
-				EFE504FD321D00557B2AAA91D4A3BED0 /* Sources */,
-				922AC3924CB59F6CBD110B159F5F24E6 /* Frameworks */,
+				B91612102821F73333446D41F1A9FB8A /* Sources */,
+				AD28198B79F56A682537EE6D22110EA1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA6986529F70A9558D39A269A8ACDE67 /* PBXTargetDependency */,
+				E4A97B3825448FF80DA164B81864E8F8 /* PBXTargetDependency */,
+			);
+			name = "Pods-wip";
+			productName = "Pods-wip";
+			productReference = C938F9504EA92B81D51327A0283D86FF /* libPods-wip.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B36F6D48026E14827529F787D63D61B8 /* DateTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83C57ED88BD343EDFD50AEF30C9399D5 /* Build configuration list for PBXNativeTarget "DateTools" */;
+			buildPhases = (
+				A108229C40AA4BB1BB9267993F1FDD1A /* Sources */,
+				B64818EEEF5EA524C1DD69933592634F /* Frameworks */,
+				1DC5926BF41F775023DFA4FCB41BA95A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-wip";
-			productName = "Pods-wip";
-			productReference = 4F4C5DBE5C8C0766085444250A956005 /* libPods-wip.a */;
+			name = DateTools;
+			productName = DateTools;
+			productReference = 2C27E77C878B79C71FEBB958F74241AA /* libDateTools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F7BDB909814DEB7782F79D85E0E25A82 /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E0DFF31262AB74DE4BC56463E7EA1BF /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				167DA552BF3BD3B01204ECBBC339F246 /* Sources */,
+				1CAB850C037CB1330542A57840D22690 /* Frameworks */,
+				E6729CB8A91CAF1942CC00F6906285FF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 9B8843185D0E13ACC25007D355674282 /* libPureLayout.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,25 +375,68 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AA48D0F3E7A0D382DEB15CED70011970 /* Products */;
+			productRefGroup = 330586182AA0A8FA409FE77F9E65EF16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53279005AA353FCC0A92ACCC9232D6AE /* Pods-wip */,
+				B36F6D48026E14827529F787D63D61B8 /* DateTools */,
+				4906175AE7B32D06F08B2B2A3DBB548D /* Pods-wip */,
+				F7BDB909814DEB7782F79D85E0E25A82 /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EFE504FD321D00557B2AAA91D4A3BED0 /* Sources */ = {
+		167DA552BF3BD3B01204ECBBC339F246 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EACA7CF1E2C5A26849311915E64F58F /* Pods-wip-dummy.m in Sources */,
+				90A6AF3932937E0725C26421874FDCFA /* ALView+PureLayout.m in Sources */,
+				C9F64C23625AFDED348387E17700D00A /* NSArray+PureLayout.m in Sources */,
+				59944E7D4320B33209B4659403F310DE /* NSLayoutConstraint+PureLayout.m in Sources */,
+				C01E919EC8DB801B50C2794FBF03357B /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A108229C40AA4BB1BB9267993F1FDD1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				792D5F4C3D387EF341CAC369A9352410 /* DateTools-dummy.m in Sources */,
+				F7D72F58455BFCBFD8CCF6E8101282E0 /* DTConstants.m in Sources */,
+				65FF98F97E624A9F65F316163B40E6B1 /* DTError.m in Sources */,
+				917708EF9C1E0FF3F52950702E64CFCF /* DTTimePeriod.m in Sources */,
+				6E3821BF693336BB2811CD7624622DDF /* DTTimePeriodChain.m in Sources */,
+				F7207BD83807D2D87377FB80266EA4E4 /* DTTimePeriodCollection.m in Sources */,
+				6D035B21F99373FFC94C2184EEE5D3EA /* DTTimePeriodGroup.m in Sources */,
+				E7C2D39B0444E09CE41BA92C1933E5FB /* NSDate+DateTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B91612102821F73333446D41F1A9FB8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13E2DA59EC28F552BA38FD659793348 /* Pods-wip-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA6986529F70A9558D39A269A8ACDE67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DateTools;
+			target = B36F6D48026E14827529F787D63D61B8 /* DateTools */;
+			targetProxy = 8BA8D24C3480A1B003C68B172C9452E8 /* PBXContainerItemProxy */;
+		};
+		E4A97B3825448FF80DA164B81864E8F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = F7BDB909814DEB7782F79D85E0E25A82 /* PureLayout */;
+			targetProxy = 00F85F861E77143090C23FC92EBD8B0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
@@ -210,25 +499,48 @@
 			};
 			name = Debug;
 		};
-		76D3A84A6EF8D53AF1FBE1D94A101D1C /* Debug */ = {
+		6A5D33DB099D299317DFE9495A672F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3306E60A105894410C235C1DDC0B3CAB /* Pods-wip.debug.xcconfig */;
+			baseConfigurationReference = 0A8D492DAC5E890297AE6D4A44F4A8A1 /* PureLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		6C066BF0EAACD1273F6D0124E68FC4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84FD8CEC6C45A7B730F50871DD09C39A /* DateTools.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -285,7 +597,29 @@
 			};
 			name = Release;
 		};
-		DF8BA931E52376EF47708E2BD2FA57AC /* Release */ = {
+		A9B434A217E7D10BBC0799481EAB5389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A8D492DAC5E890297AE6D4A44F4A8A1 /* PureLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCC39BFCFCC6D79D41004A273309F146 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B84272EA9535660923E2DE56695359D /* Pods-wip.release.xcconfig */;
 			buildSettings = {
@@ -306,9 +640,59 @@
 			};
 			name = Release;
 		};
+		D8254388AEE28D9034109949B24599BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3306E60A105894410C235C1DDC0B3CAB /* Pods-wip.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB3DF1542C9C5CA4D9152C3EFBE2B84E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84FD8CEC6C45A7B730F50871DD09C39A /* DateTools.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		25B5C92D0D3A2C52FFC84FA628DF1175 /* Build configuration list for PBXNativeTarget "Pods-wip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8254388AEE28D9034109949B24599BB /* Debug */,
+				BCC39BFCFCC6D79D41004A273309F146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -318,11 +702,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		980C9E6FA7C093D5B8A2F024DE7472A1 /* Build configuration list for PBXNativeTarget "Pods-wip" */ = {
+		83C57ED88BD343EDFD50AEF30C9399D5 /* Build configuration list for PBXNativeTarget "DateTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76D3A84A6EF8D53AF1FBE1D94A101D1C /* Debug */,
-				DF8BA931E52376EF47708E2BD2FA57AC /* Release */,
+				EB3DF1542C9C5CA4D9152C3EFBE2B84E /* Debug */,
+				6C066BF0EAACD1273F6D0124E68FC4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E0DFF31262AB74DE4BC56463E7EA1BF /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5D33DB099D299317DFE9495A672F2A /* Debug */,
+				A9B434A217E7D10BBC0799481EAB5389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
