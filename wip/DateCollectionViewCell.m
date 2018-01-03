@@ -12,6 +12,7 @@
 
 @implementation DateCollectionViewCell {
     UILabel *dateNumberLabel;
+    UIView *circle;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -23,25 +24,42 @@
     return self;
 }
 
+-(void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    circle.layer.cornerRadius = circle.frame.size.height / 2;
+}
+
 - (void)initialize {
+    circle = [[UIView alloc] init];
+    circle.translatesAutoresizingMaskIntoConstraints = NO;
+    circle.clipsToBounds = YES;
+    
+    [self addSubview:circle];
+    [circle autoPinEdgesToSuperviewMargins];
+    [circle autoCenterInSuperview];
+    
     dateNumberLabel = [[UILabel alloc] init];
     dateNumberLabel.textAlignment = NSTextAlignmentCenter;
     dateNumberLabel.numberOfLines = 1;
+    dateNumberLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
     UIFont *f = dateNumberLabel.font;
     dateNumberLabel.font = [f fontWithSize:14.0];
     
-    [self addSubview:dateNumberLabel];
+    [circle addSubview:dateNumberLabel];
     [dateNumberLabel autoCenterInSuperview];
 }
 
 - (void)setup:(NSDate *)d exists:(BOOL)exists {
+    self.backgroundColor = UIColor.clearColor;
+    
     NSDate *now = [[NSDate alloc] init];
     if ([d isLaterThan:now] || !exists) {
-        self.backgroundColor = [UIColor grayColor];
+        circle.backgroundColor = [UIColor grayColor];
         dateNumberLabel.textColor = [UIColor lightGrayColor];
     } else {
-        self.backgroundColor = [UIColor colorWithHue:drand48() saturation:1.0 brightness:1.0 alpha:1.0];
+        circle.backgroundColor = [UIColor colorWithHue:drand48() saturation:1.0 brightness:1.0 alpha:1.0];
+        dateNumberLabel.textColor = UIColor.blackColor;
     }
     
     dateNumberLabel.text = [NSString stringWithFormat:@"%li", (long)[d day]];
