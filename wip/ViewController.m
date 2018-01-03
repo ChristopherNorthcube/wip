@@ -37,7 +37,7 @@
 
 - (void)createData {
     data = @{@"201802": @[@20180201, @20180205, @20180210, @20180211, @20180212, @20180225, @20180226],
-             @"201801": @[@20180103, @20180107, @20180110, @20180115, @20180116, @20180119, @20180120],
+             @"201801": @[@20180101, @20180102, @20180103],
              @"201712": @[@20171202, @20171203, @20171204, @20171208, @20171210, @20171211, @20171213],
              @"201711": @[@20171106, @20171107, @20171108, @20171120],
              @"201710": @[@20171001, @20171002, @20171005, @20171007],
@@ -75,11 +75,10 @@
 }
 
 - (int)buildDateKeyForIndexPath:(NSIndexPath *)ip {
-    
     NSString *row = ip.row < 10 ? [NSString stringWithFormat:@"0%li", (long)ip.row + 1] : [NSString stringWithFormat:@"%li", (long)ip.row + 1];
-    
     NSArray *sortedData = [self sortKeys];
     NSString *value = [NSString stringWithFormat:@"%@%@", sortedData[ip.section], row];
+    
     return [value intValue];
 }
 
@@ -138,9 +137,18 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+
+    int currentValue = [self buildDateKeyForIndexPath:indexPath];
+    NSDateComponents *components = [self fetchComponents: currentValue];
+    NSCalendar *calendar = NSCalendar.currentCalendar;
+    NSDate *d = [calendar dateFromComponents:components];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM YYY"];
+    NSString *text = [formatter stringFromDate:d].uppercaseString;
+    
     HeaderCollectionReusableView* v = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
-    NSString *t = [NSString stringWithFormat:@"MAY %li", (long)indexPath.section];
-    [v setup:t];
+    [v setup:text];
     
     return v;
 }
