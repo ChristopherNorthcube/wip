@@ -14,25 +14,28 @@
 
 @implementation ViewController {
     NSDictionary *data;
+    NSCalendar *calendar;
+    NSDateComponents *components;
+    NSDateFormatter *formatter;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Overview";
     
+    calendar = NSCalendar.currentCalendar;
+    formatter = [[NSDateFormatter alloc] init];
+    
     [self createData];
     [self createCollectionView];
 }
 
-- (NSDateComponents *)fetchComponents: (int)v {
-    
-    NSDateComponents *components;
+- (void)setupComponentsOnValue: (int)v {
+    components = [NSDateComponents new];
     components = [NSDateComponents new];
     components.day = v % 100;
     components.month = (v / 100) % 100;
     components.year = (v / 10000);
-    
-    return components;
 }
 
 - (void)createData {
@@ -99,11 +102,9 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     NSArray *sortedData = [self sortKeys];
-    
     NSString *key = [NSString stringWithFormat:@"%@", sortedData[section]];
-    NSDateComponents *components = [self fetchComponents: [key intValue]];
-    NSCalendar *calendar = NSCalendar.currentCalendar;
-
+    [self setupComponentsOnValue: [key intValue]];
+    
     NSDate *d = [calendar dateFromComponents:components];
     NSRange r = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:d];
     
@@ -115,13 +116,11 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DateCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
-
     int currentValue = [self buildDateKeyForIndexPath:indexPath];
-    NSDateComponents *components = [self fetchComponents: currentValue];
-    NSCalendar *calendar = NSCalendar.currentCalendar;
+    [self setupComponentsOnValue: currentValue];
     NSDate *d = [calendar dateFromComponents:components];
     
+    DateCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
     [cell setup:d exists:[self doesValueExist:currentValue forIndexPath:indexPath]];
 
     return cell;
@@ -137,13 +136,10 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-
     int currentValue = [self buildDateKeyForIndexPath:indexPath];
-    NSDateComponents *components = [self fetchComponents: currentValue];
-    NSCalendar *calendar = NSCalendar.currentCalendar;
+    [self setupComponentsOnValue: currentValue];
     NSDate *d = [calendar dateFromComponents:components];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMM YYY"];
     NSString *text = [formatter stringFromDate:d].uppercaseString;
     
