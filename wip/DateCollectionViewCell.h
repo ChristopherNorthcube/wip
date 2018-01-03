@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DateCollectionViewCell : UICollectionViewCell
-- (void)setup:(NSDate *)d;
+- (void)setup:(NSDate *)d exists:(BOOL)exists;
 @end

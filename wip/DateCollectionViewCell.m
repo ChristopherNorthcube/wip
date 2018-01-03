@@ -35,9 +35,9 @@
     [dateNumberLabel autoCenterInSuperview];
 }
 
-- (void)setup:(NSDate *)d {
+- (void)setup:(NSDate *)d exists:(BOOL)exists {
     NSDate *now = [[NSDate alloc] init];
-    if ([d isLaterThan:now]) {
+    if ([d isLaterThan:now] || !exists) {
         self.backgroundColor = [UIColor grayColor];
         dateNumberLabel.textColor = [UIColor lightGrayColor];
     } else {
