@@ -32,10 +32,15 @@
 
 - (void)setupComponentsOnValue: (int)v {
     components = [NSDateComponents new];
-    components = [NSDateComponents new];
-    components.day = v % 100;
-    components.month = (v / 100) % 100;
-    components.year = (v / 10000);
+    NSUInteger len = [@(v) stringValue].length;
+    int value = v;
+    if (len == 6) {
+        value = value * 100;
+    }
+    
+    components.day = len == 6 ? 1 : value % 100;
+    components.month = (value / 100) % 100;
+    components.year = (value / 10000);
 }
 
 - (void)createData {
