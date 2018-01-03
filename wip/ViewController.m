@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HeaderCollectionReusableView.h"
+#import "DateCollectionViewCell.h"
 
 #import <PureLayout.h>
 
@@ -29,12 +30,13 @@
     
     UICollectionView *cv = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:l];
     cv.translatesAutoresizingMaskIntoConstraints = NO;
-    cv.backgroundColor = [UIColor grayColor];
+    cv.backgroundColor = [UIColor whiteColor];
+    
     cv.dataSource = self;
     cv.delegate = self;
     
     [cv registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-    [cv registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
+    [cv registerClass:[DateCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
     
     [self.view addSubview:cv];
     [cv autoPinEdgesToSuperviewEdges];
@@ -50,8 +52,9 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithHue:drand48() saturation:1.0 brightness:1.0 alpha:1.0];
+    DateCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
+    
+    [cell setup:[[NSDate alloc] init]];
     return cell;
 }
 
@@ -66,7 +69,7 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     HeaderCollectionReusableView* v = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
-    [v setup];
+    [v setup:@"MAY 2015"];
     
     return v;
 }

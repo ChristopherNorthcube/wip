@@ -36,10 +36,9 @@
     return self;
 }
 
-- (void)setup {
-    self.backgroundColor = UIColor.purpleColor;
-    title.text = @"Test";
-    separator.backgroundColor = [UIColor blackColor];
+- (void)setup:(NSString *)t {
+    title.text = t;
+    separator.backgroundColor = [UIColor lightGrayColor];
 }
 
 @end

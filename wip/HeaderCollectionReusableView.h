@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HeaderCollectionReusableView : UICollectionReusableView
-- (void)setup;
+- (void)setup:(NSString *)t;
 @end

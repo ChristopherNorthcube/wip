@@ -15,6 +15,7 @@
 		7CC2E24E1FFBC28A0090C4BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2E24D1FFBC28A0090C4BA /* Assets.xcassets */; };
 		7CC2E2511FFBC28A0090C4BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2E24F1FFBC28A0090C4BA /* LaunchScreen.storyboard */; };
 		7CC2E2541FFBC28A0090C4BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2E2531FFBC28A0090C4BA /* main.m */; };
+		7CC4EF751FFCD62E00548EBE /* DateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		7CC2E2501FFBC28A0090C4BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CC2E2521FFBC28A0090C4BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CC2E2531FFBC28A0090C4BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CC4EF731FFCD62E00548EBE /* DateCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCollectionViewCell.h; sourceTree = "<group>"; };
+		7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCollectionViewCell.m; sourceTree = "<group>"; };
 		B1ADEE8DD4BAB005B22B9BED /* Pods-wip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wip.release.xcconfig"; path = "Pods/Target Support Files/Pods-wip/Pods-wip.release.xcconfig"; sourceTree = "<group>"; };
 		D77B48066D386D98FEF9A13D /* Pods-wip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wip/Pods-wip.debug.xcconfig"; sourceTree = "<group>"; };
 		EC4BC242EE1CDCA9A1208C97 /* libPods-wip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +91,8 @@
 				7CC2E2531FFBC28A0090C4BA /* main.m */,
 				7CB4281B1FFBCD1F0023938F /* HeaderCollectionReusableView.h */,
 				7CB4281C1FFBCD1F0023938F /* HeaderCollectionReusableView.m */,
+				7CC4EF731FFCD62E00548EBE /* DateCollectionViewCell.h */,
+				7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */,
 			);
 			path = wip;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				7CC2E2491FFBC28A0090C4BA /* ViewController.m in Sources */,
 				7CC2E2541FFBC28A0090C4BA /* main.m in Sources */,
 				7CC2E2461FFBC28A0090C4BA /* AppDelegate.m in Sources */,
+				7CC4EF751FFCD62E00548EBE /* DateCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
