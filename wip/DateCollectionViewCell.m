@@ -35,8 +35,12 @@
     circle.clipsToBounds = YES;
     
     [self addSubview:circle];
-    [circle autoPinEdgesToSuperviewMargins];
-    [circle autoCenterInSuperview];
+    
+    [circle autoPinEdgeToSuperviewMargin:ALEdgeTop];
+    [circle autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+    [circle autoPinEdgeToSuperviewMargin:ALEdgeRight];
+    [circle autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView: circle];
+    
     
     dateNumberLabel = [[UILabel alloc] init];
     dateNumberLabel.textAlignment = NSTextAlignmentCenter;
@@ -51,7 +55,7 @@
 }
 
 - (void)setup:(NSDate *)d exists:(BOOL)exists {
-    self.backgroundColor = UIColor.clearColor;
+    self.backgroundColor = UIColor.blackColor;
     
     NSDate *now = [[NSDate alloc] init];
     if ([d isLaterThan:now] || !exists) {

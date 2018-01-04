@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HeaderCollectionReusableView.h"
 #import "DateCollectionViewCell.h"
+#import "CustomCollectionViewFlowLayout.h"
 
 #import <PureLayout.h>
 
@@ -17,17 +18,32 @@
     NSCalendar *calendar;
     NSDateComponents *components;
     NSDateFormatter *formatter;
+    
+    CGFloat cellWidth;
+    CGFloat cellHeight;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Overview";
     
-    calendar = NSCalendar.currentCalendar;
+    calendar = [NSCalendar currentCalendar];
+    [calendar setLocale:[NSLocale currentLocale]];
+    
     formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
     
     [self createData];
     [self createCollectionView];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    if (cellWidth == 0) {
+        cellWidth = floorf((self.view.frame.size.width / 7) * 100 + 0.5) / 100; // Round down or we might get too large width causing rows to be incorrect.
+        cellHeight = cellWidth;
+    }
 }
 
 - (void)setupComponentsOnValue: (int)v {
@@ -55,7 +71,7 @@
 }
 
 - (void)createCollectionView {
-    UICollectionViewFlowLayout *l = [[UICollectionViewFlowLayout alloc] init];
+    CustomCollectionViewFlowLayout *l = [[CustomCollectionViewFlowLayout alloc] init];
     l.minimumInteritemSpacing = 0;
     l.minimumLineSpacing = 0;
     
@@ -132,8 +148,17 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat width = self.view.frame.size.width / 7;
-    return CGSizeMake(width, width);
+
+    CGFloat adjustedWidthForFirstCell = cellWidth;
+    if (indexPath.row == 0) {
+        int currentValue = [self buildDateKeyForIndexPath:indexPath];
+        [self setupComponentsOnValue: currentValue];
+        NSDate *d = [calendar dateFromComponents:components];
+        NSInteger weekday = [calendar component:NSCalendarUnitWeekday fromDate:d];
+        adjustedWidthForFirstCell = weekday * cellWidth; // Adjust the first cells width to "move" the cell to correct position based on weekdays.
+    }
+    
+    return CGSizeMake(adjustedWidthForFirstCell, cellHeight);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -153,5 +178,6 @@
     
     return v;
 }
+
 
 @end
