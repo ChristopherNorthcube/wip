@@ -21,6 +21,9 @@
     
     CGFloat cellWidth;
     CGFloat cellHeight;
+    UIView *v;
+    UIImageView *navBarLine;
+    UICollectionView *collectionView;
 }
 
 - (void)viewDidLoad {
@@ -33,6 +36,9 @@
     formatter = [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
     
+    navBarLine = [self findNavBarLine:self.navigationController.navigationBar];
+    [navBarLine setHidden:YES];
+    
     [self createData];
     [self createCollectionView];
 }
@@ -43,7 +49,133 @@
     if (cellWidth == 0) {
         cellWidth = floorf((self.view.frame.size.width / 7) * 100 + 0.5) / 100; // Round down or we might get too large width causing rows to be incorrect.
         cellHeight = cellWidth;
+        [self buildTitleView];
     }
+}
+
+-(UIImageView *)findNavBarLine:(UIView *)view {
+    if ([view isKindOfClass:[UIImageView class]] && view.bounds.size.height <= 1.0)
+        return (UIImageView *) view;
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findNavBarLine:subview];
+        if (imageView)
+            return imageView;
+    }
+    return nil;
+}
+
+- (void)buildTitleView {
+
+    v = [[UIView alloc] init];
+    v.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:v];
+    [v autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [v autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [v autoPinEdgeToSuperviewMargin:ALEdgeTop];
+    [v autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:collectionView];
+    [v autoSetDimension:ALDimensionHeight toSize:24];
+    
+    v.backgroundColor = self.navigationController.navigationBar.backgroundColor;
+
+    UIView *line = [[UIView alloc] init];
+    line.translatesAutoresizingMaskIntoConstraints = NO;
+    line.backgroundColor = UIColor.blackColor;
+    
+    [v addSubview:line];
+   
+    [line autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [line autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [line autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [line autoSetDimension:ALDimensionHeight toSize:1.0];
+    
+//    UILabel *m = [[UILabel alloc] init];
+//    UIFont *font = m.font;
+//    CGFloat fontSize = 8.0;
+//
+//    m.translatesAutoresizingMaskIntoConstraints = NO;
+//    m.textAlignment = NSTextAlignmentCenter;
+//    m.font = [font fontWithSize:fontSize];
+//    m.text = @"M";
+//
+//    UILabel *tis = [[UILabel alloc] init];
+//    tis.translatesAutoresizingMaskIntoConstraints = NO;
+//    tis.textAlignment = NSTextAlignmentCenter;
+//    tis.font = [font fontWithSize:fontSize];
+//    tis.text = @"T";
+//
+//    UILabel *o = [[UILabel alloc] init];
+//    o.translatesAutoresizingMaskIntoConstraints = NO;
+//    o.textAlignment = NSTextAlignmentCenter;
+//    o.text = @"O";
+//    o.font = [font fontWithSize:fontSize];
+//
+//    UILabel *t = [[UILabel alloc] init];
+//    t.translatesAutoresizingMaskIntoConstraints = NO;
+//    t.textAlignment = NSTextAlignmentCenter;
+//    t.text = @"T";
+//    t.font = [font fontWithSize:fontSize];
+//
+//    UILabel *f = [[UILabel alloc] init];
+//    f.translatesAutoresizingMaskIntoConstraints = NO;
+//    f.textAlignment = NSTextAlignmentCenter;
+//    f.text = @"F";
+//    f.font = [font fontWithSize:fontSize];
+//
+//    UILabel *l = [[UILabel alloc] init];
+//    l.translatesAutoresizingMaskIntoConstraints = NO;
+//    l.textAlignment = NSTextAlignmentCenter;
+//    l.text = @"L";
+//    l.font = [font fontWithSize:fontSize];
+//
+//    UILabel *s = [[UILabel alloc] init];
+//    s.translatesAutoresizingMaskIntoConstraints = NO;
+//    s.textAlignment = NSTextAlignmentCenter;
+//    s.text = @"S";
+//    s.font = [font fontWithSize:fontSize];
+//
+//    [v addSubview:m];
+//    [v addSubview:tis];
+//    [v addSubview:o];
+//    [v addSubview:t];
+//    [v addSubview:f];
+//    [v addSubview:l];
+//    [v addSubview:s];
+//
+//    [m autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+//    [m autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [m autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//
+//    [tis autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:m];
+//    [tis autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [tis autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//    [tis autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
+//
+//    [o autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:tis];
+//    [o autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [o autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//    [o autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
+//
+//    [t autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:o];
+//    [t autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [t autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//    [t autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
+//
+//    [f autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:t];
+//    [f autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [f autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//    [f autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
+//
+//    [l autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:f];
+//    [l autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [l autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];
+//    [l autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
+//
+//    [s autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:l];
+//    [s autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    [s autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:line];;
+//    [s autoPinEdgeToSuperviewEdge:ALEdgeRight];
+//    [s autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:m];
 }
 
 - (void)setupComponentsOnValue: (int)v {
@@ -75,18 +207,20 @@
     l.minimumInteritemSpacing = 0;
     l.minimumLineSpacing = 0;
     
-    UICollectionView *cv = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:l];
-    cv.translatesAutoresizingMaskIntoConstraints = NO;
-    cv.backgroundColor = [UIColor whiteColor];
+    collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:l];
+    collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    collectionView.backgroundColor = [UIColor whiteColor];
     
-    cv.dataSource = self;
-    cv.delegate = self;
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
     
-    [cv registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-    [cv registerClass:[DateCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
+    [collectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [collectionView registerClass:[DateCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
     
-    [self.view addSubview:cv];
-    [cv autoPinEdgesToSuperviewEdges];
+    [self.view addSubview:collectionView];
+    [collectionView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [collectionView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [collectionView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
 }
 
 - (NSArray *)sortKeys {
