@@ -16,6 +16,7 @@
 		7CC2E2511FFBC28A0090C4BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2E24F1FFBC28A0090C4BA /* LaunchScreen.storyboard */; };
 		7CC2E2541FFBC28A0090C4BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2E2531FFBC28A0090C4BA /* main.m */; };
 		7CC4EF751FFCD62E00548EBE /* DateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */; };
+		9D5CBD5F1FFF649F0077E949 /* CalendarToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CBD5E1FFF649F0077E949 /* CalendarToolbar.m */; };
 		9D6B74F01FFE0FC1007F252E /* CustomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6B74EF1FFE0FC1007F252E /* CustomCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		7CC2E2531FFBC28A0090C4BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CC4EF731FFCD62E00548EBE /* DateCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCollectionViewCell.h; sourceTree = "<group>"; };
 		7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCollectionViewCell.m; sourceTree = "<group>"; };
+		9D5CBD5D1FFF649F0077E949 /* CalendarToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarToolbar.h; sourceTree = "<group>"; };
+		9D5CBD5E1FFF649F0077E949 /* CalendarToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarToolbar.m; sourceTree = "<group>"; };
 		9D6B74EE1FFE0FC1007F252E /* CustomCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		9D6B74EF1FFE0FC1007F252E /* CustomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		B1ADEE8DD4BAB005B22B9BED /* Pods-wip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wip.release.xcconfig"; path = "Pods/Target Support Files/Pods-wip/Pods-wip.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				7CC4EF741FFCD62E00548EBE /* DateCollectionViewCell.m */,
 				9D6B74EE1FFE0FC1007F252E /* CustomCollectionViewFlowLayout.h */,
 				9D6B74EF1FFE0FC1007F252E /* CustomCollectionViewFlowLayout.m */,
+				9D5CBD5D1FFF649F0077E949 /* CalendarToolbar.h */,
+				9D5CBD5E1FFF649F0077E949 /* CalendarToolbar.m */,
 			);
 			path = wip;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			files = (
 				7CB4281D1FFBCD1F0023938F /* HeaderCollectionReusableView.m in Sources */,
 				7CC2E2491FFBC28A0090C4BA /* ViewController.m in Sources */,
+				9D5CBD5F1FFF649F0077E949 /* CalendarToolbar.m in Sources */,
 				7CC2E2541FFBC28A0090C4BA /* main.m in Sources */,
 				7CC2E2461FFBC28A0090C4BA /* AppDelegate.m in Sources */,
 				9D6B74F01FFE0FC1007F252E /* CustomCollectionViewFlowLayout.m in Sources */,
